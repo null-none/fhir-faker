@@ -1,11 +1,15 @@
 # fhir-faker
 A library for generating fake FHIR resources and datatypes
 
+```bash
+pip install fhir-faker
+```
+
 
 ```python
 # Data types
 
-from fake import FakeFHIR
+from "fhir-faker" import FakeFHIR
 
 fake = FakeFHIR()
 
@@ -33,7 +37,7 @@ print(fake.human_name().update({"use": "temp"}))
 ```python
 # Resources
 
-from fake import FakeFHIR
+from "fhir-faker" import FakeFHIR
 
 fake = FakeFHIR()
 # return resources list
@@ -58,7 +62,7 @@ print(fake.patient(sex="female").serialize())
 ```python
 # Locale
 
-from fake import FakeFHIR
+from "fhir-faker" import FakeFHIR
 
 fake = FakeFHIR(locale="it_IT")
 print(fake.patient().serialize())

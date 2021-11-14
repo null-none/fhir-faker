@@ -2,12 +2,12 @@ from setuptools import setup
 
 setup(
     name="fhir-faker",
-    version="0.0.1",
+    version="0.0.2",
     description="A library for generating fake FHIR resources and data types.",
     long_description="A library for generating fake FHIR resources and data types.",
     keywords="python, fhir, resources, faker",
     author="Kalinin Dmitry <kalinin.mitko@gmail.com>",
-    url="hhttps://github.com/null-none/fhir-faker",
+    url="https://github.com/null-none/fhir-faker",
     license="MIT",
     packages=["src"],
     zip_safe=False,
