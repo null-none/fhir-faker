@@ -6,6 +6,7 @@ A library for generating fake FHIR resources and datatypes
 pip install fhir-faker
 ```
 
+### Examples
 
 ```python
 # Data types
