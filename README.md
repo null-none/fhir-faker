@@ -42,7 +42,7 @@ from "fhir-faker" import FakeFHIR
 fake = FakeFHIR()
 # return resources list
 print(fake.resources)
-# {'managingOrganization': {'resourceType': 'Organization', 'active': False, 'identifier': '745fba5058bf4351abbe02e8f4276365', 'name': u'Glenn Group'}, 'name': [{'use': 'maiden', 'suffix': [u'Jr.'], 'family': u'Sanford', 'text': u'Matthew Todd PhD', 'given': u'Gary', 'period': {'start': datetime.date(2000, 6, 18), 'end': datetime.date(2021, 11, 14)}, 'prefix': [u'Dr.']}], 'resourceType': 'Patient', 'birthDate': datetime.date(1993, 8, 24), 'address': [{'city': u'Johnsonside', 'use': 'temp', 'district': u'bury', 'text': u'PSC 1292, Box 4906\nAPO AE 46449', 'period': {'start': datetime.date(1988, 12, 9), 'end': datetime.date(2021, 11, 14)}, 'state': u'haven', 'country': u'Congo', 'postalCode': u'41762', 'line': [u'6676 Lisa Fords Suite 341'], 'type': 'both'}], 'active': True, 'identifier': 'ec558e77780048608cefdab7f8f0c0e7'}['patient', 'organization']
+# ["patient", "organization"]
 
 # return Patient resource
 print(fake.patient().serialize())
