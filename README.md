@@ -1,12 +1,12 @@
 # fhir-faker
 A library for generating fake FHIR resources and datatypes
 
-### Install 
+#### Install 
 ```bash
 pip install fhir-faker
 ```
 
-### Examples
+#### Examples
 
 ```python
 # Data types
