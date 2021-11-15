@@ -13,8 +13,8 @@ class Period(Base):
     A period specifies a range of times. The context of use will specify whether the entire range applies (e.g. "the patient was an inpatient of the hospital for this time range") or one value from the period applies (e.g. "give to the patient between 2 and 4 pm on 24-Jun 2013").
 
     Attributes:
-        start : "<dateTime>", // C? Starting time with inclusive boundary
-        end   : "<dateTime>" // C? End time with inclusive boundary, if not ongoing
+        "start" : "<dateTime>", // C? Starting time with inclusive boundary
+        "end"   : "<dateTime>" // C? End time with inclusive boundary, if not ongoing
     """
 
     def __init__(self, faker):
