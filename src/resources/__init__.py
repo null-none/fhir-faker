@@ -1,6 +1,7 @@
 from patient import Patient
 from organization import Organization
 from practitioner import Practitioner
+from appointment import Appointment
 
 
 class FakeResources(object):
@@ -12,3 +13,6 @@ class FakeResources(object):
 
     def practitioner(self, sex="male"):
         return Practitioner(self.faker, sex)
+
+    def appointment(self):
+        return Appointment(self.faker)

@@ -6,5 +6,11 @@ from resources import FakeResources
 class FakeFHIR(FakeDateTypes, FakeResources):
     def __init__(self, locale=["en_US"]):
         self.faker = Faker(locale)
-        self.data_types = ["human_name", "period", "address"]
-        self.resources = ["patient", "organization"]
+        self.data_types = [
+            "human_name",
+            "period",
+            "address",
+            "identifier",
+            "contact_point",
+        ]
+        self.resources = ["patient", "organization", "practitioner", "appointment"]

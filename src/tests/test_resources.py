@@ -9,10 +9,14 @@ class TestResources:
 
     def test_patient(self):
         fake = FakeFHIR()
-        assert "resourceType" in fake.patient().serialize()
-        assert "name" in fake.patient().serialize()
+        assert "resourceType" in fake.patient(sex="male").serialize()
+        assert "name" in fake.patient(sex="male").serialize()
 
     def test_patient(self):
         fake = FakeFHIR()
-        assert "resourceType" in fake.practitioner().serialize()
-        assert "name" in fake.practitioner().serialize()
+        assert "resourceType" in fake.practitioner(sex="female").serialize()
+        assert "name" in fake.practitioner(sex="female").serialize()
+
+    def test_appointment(self):
+        fake = FakeFHIR()
+        assert "resourceType" in fake.appointment().serialize()
