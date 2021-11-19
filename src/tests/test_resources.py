@@ -20,3 +20,7 @@ class TestResources:
     def test_appointment(self):
         fake = FakeFHIR()
         assert "resourceType" in fake.appointment().serialize()
+
+    def test_person(self):
+        fake = FakeFHIR()
+        assert "resourceType" in fake.person().serialize()
