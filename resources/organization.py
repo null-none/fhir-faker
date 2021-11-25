@@ -1,9 +1,8 @@
 import random
 import uuid
+from datetime import date
 
-from common.base import Base
-from data_types.human_name import HumanName
-from data_types.address import Address
+from ..common.base import Base
 
 
 class Organization(Base):
@@ -23,7 +22,11 @@ class Organization(Base):
     def __init__(self, faker):
         """Init Organization Resource"""
         self.resourceType = "Organization"
-        self.identifier = uuid.uuid4().hex
+        self.id = uuid.uuid4().hex
+        self.meta = {
+            "versionId": "{}".format(random.randrange(10)),
+            "lastUpdated": date.today().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        }
         self.active = bool(random.getrandbits(1))
         self.name = faker.company()
 

@@ -1,8 +1,7 @@
 import random
-from datetime import date
 
-from period import Period
-from common.base import Base
+from ..common.base import Base
+from .period import Period
 
 
 class Identifier(Base):

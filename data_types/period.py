@@ -1,7 +1,6 @@
-import random
 from datetime import date
 
-from common.base import Base
+from ..common.base import Base
 
 
 class Period(Base):
