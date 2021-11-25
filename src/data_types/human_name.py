@@ -1,7 +1,7 @@
 import random
 
-from ..common.base import Base
-from .period import Period
+from period import Period
+from common.base import Base
 
 
 class HumanName(Base):

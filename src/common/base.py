@@ -1,5 +1,3 @@
-import json
-
 class Base(object):
     def update(self, params=None):
         if isinstance(params, dict):
@@ -8,4 +6,4 @@ class Base(object):
         return self.serialize()
 
     def serialize(self):
-        return json.dumps(self.__dict__)
+        return self.__dict__

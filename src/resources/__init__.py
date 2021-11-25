@@ -1,10 +1,8 @@
-from .patient import Patient
-from .organization import Organization
-from .practitioner import Practitioner
-from .appointment import Appointment
-from .person import Person
-from .charge_item import ChargeItem
-
+from patient import Patient
+from organization import Organization
+from practitioner import Practitioner
+from appointment import Appointment
+from person import Person
 
 class FakeResources(object):
     def patient(self, sex="male"):
@@ -21,6 +19,3 @@ class FakeResources(object):
 
     def appointment(self):
         return Appointment(self.faker)
-
-    def charge_item(self):
-        return ChargeItem(self.faker)

@@ -1,8 +1,8 @@
-from .human_name import HumanName
-from .period import Period
-from .address import Address
-from .contact_point import ContactPoint
-from .identifier import Identifier
+from human_name import HumanName
+from period import Period
+from address import Address
+from contact_point import ContactPoint
+from identifier import Identifier
 
 
 class FakeDateTypes(object):

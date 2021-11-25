@@ -1,6 +1,6 @@
 from faker import Faker
-from .data_types import FakeDateTypes
-from .resources import FakeResources
+from data_types import FakeDateTypes
+from resources import FakeResources
 
 
 class FakeFHIR(FakeDateTypes, FakeResources):
@@ -13,11 +13,4 @@ class FakeFHIR(FakeDateTypes, FakeResources):
             "identifier",
             "contact_point",
         ]
-        self.resources = [
-            "patient",
-            "organization",
-            "practitioner",
-            "appointment",
-            "person",
-            "charge_item",
-        ]
+        self.resources = ["patient", "organization", "practitioner", "appointment", "person"]

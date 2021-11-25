@@ -2,8 +2,11 @@ import random
 import uuid
 from datetime import date, timedelta
 
-from ..common.base import Base
-from .practitioner import Practitioner
+from common.base import Base
+from data_types.human_name import HumanName
+from data_types.address import Address
+from resources.practitioner import Practitioner
+from data_types.contact_point import ContactPoint
 
 
 class Appointment(Base):
@@ -52,11 +55,7 @@ class Appointment(Base):
     def __init__(self, faker):
         """Init Appointment Resource"""
         self.resourceType = "Appointment"
-        self.id = uuid.uuid4().hex
-        self.meta = {
-            "versionId": "{}".format(random.randrange(10)),
-            "lastUpdated": date.today().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        }
+        self.identifier = uuid.uuid4().hex
         self.status = random.choice(
             [
                 "proposed",
@@ -77,7 +76,12 @@ class Appointment(Base):
         self.participant = [
             {
                 "status": random.choice(
-                    ["accepted", "declined", "tentative", "needs-action"]
+                    [
+                        "accepted",
+                        "declined",
+                        "tentative",
+                        "needs-action"
+                    ]
                 ),
                 "actor": Practitioner(faker, sex="male").serialize(),
             }

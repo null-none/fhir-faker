@@ -1,12 +1,11 @@
 import random
 import uuid
-from datetime import date
 
-from ..common.base import Base
-from ..data_types.human_name import HumanName
-from ..data_types.address import Address
-from ..data_types.contact_point import ContactPoint
-from .organization import Organization
+from common.base import Base
+from data_types.human_name import HumanName
+from data_types.address import Address
+from resources.organization import Organization
+from data_types.contact_point import ContactPoint
 
 
 class Patient(Base):
@@ -29,11 +28,7 @@ class Patient(Base):
     def __init__(self, faker, sex):
         """Init Patient Resource"""
         self.resourceType = "Patient"
-        self.id = uuid.uuid4().hex
-        self.meta = {
-            "versionId": "{}".format(random.randrange(10)),
-            "lastUpdated": date.today().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        }
+        self.identifier = uuid.uuid4().hex
         self.active = bool(random.getrandbits(1))
         self.name = [HumanName(faker, sex).serialize()]
         self.address = [Address(faker).serialize()]
