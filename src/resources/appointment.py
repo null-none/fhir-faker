@@ -3,10 +3,7 @@ import uuid
 from datetime import date, timedelta
 
 from common.base import Base
-from data_types.human_name import HumanName
-from data_types.address import Address
 from resources.practitioner import Practitioner
-from data_types.contact_point import ContactPoint
 
 
 class Appointment(Base):
@@ -76,12 +73,7 @@ class Appointment(Base):
         self.participant = [
             {
                 "status": random.choice(
-                    [
-                        "accepted",
-                        "declined",
-                        "tentative",
-                        "needs-action"
-                    ]
+                    ["accepted", "declined", "tentative", "needs-action"]
                 ),
                 "actor": Practitioner(faker, sex="male").serialize(),
             }

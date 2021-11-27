@@ -13,4 +13,10 @@ class FakeFHIR(FakeDateTypes, FakeResources):
             "identifier",
             "contact_point",
         ]
-        self.resources = ["patient", "organization", "practitioner", "appointment", "person"]
+        self.resources = [
+            "patient",
+            "organization",
+            "practitioner",
+            "appointment",
+            "person",
+        ]

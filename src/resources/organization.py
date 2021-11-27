@@ -2,8 +2,6 @@ import random
 import uuid
 
 from common.base import Base
-from data_types.human_name import HumanName
-from data_types.address import Address
 
 
 class Organization(Base):
