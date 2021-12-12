@@ -11,7 +11,7 @@ pip install fhir-faker
 ```python
 # Data types
 
-from "fhir-faker" import FakeFHIR
+from fhir_faker.fake import FakeFHIR
 
 fake = FakeFHIR()
 
@@ -39,7 +39,7 @@ print(fake.human_name().update({"use": "temp"}))
 ```python
 # Resources
 
-from fhir-faker import FakeFHIR
+from fhir_faker.fake import FakeFHIR
 
 fake = FakeFHIR()
 # return resources list
@@ -64,7 +64,7 @@ print(fake.patient(sex="female").serialize())
 ```python
 # Locale
 
-from fhir-faker import FakeFHIR
+from fhir_faker.fake import FakeFHIR
 
 fake = FakeFHIR(locale="it_IT")
 print(fake.patient().serialize())
